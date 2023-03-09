@@ -11,4 +11,4 @@ This project contains solutions to the following problems
 6. Write a program that imports all functions from the file calculator_1.py and handles basic operations.
 7. Write a program that prints #pythoniscool, followed by a new line, in the standard output.
 8. Write a program that prints #pythoniscool, followed by a new line, in the standard output.
-9. Write a program that prints the alphabet in uppercase, followed by a new line.
+9. Write a program that prints the alphabet in uppercase.
