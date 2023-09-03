@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-#takes in a URL and an email, sends a POST request to the passed URL
-
-import urllib.request
-from sys import argv
+"""A script that:
+- takes in a URL,
+- sends a request to the URL
+- displays the body of the response (decoded in utf-8).
+"""
 
 
 if __name__ == "__main__":
-    url = argv[1]
-    req = urllib.request.Request(url)
+    import sys
+    from urllib import request, error
+
     try:
-        with urllib.request.urlopen(req) as response:
-            html = response.read()
-            html_str = html.decode('utf-8')
-            print(html_str)
-    except urllib.error.HTTPError as e:
-        print("Error code: {}".format(e.code))
+        with request.urlopen(sys.argv[1]) as res:
+            print(res.read().decode('UTF-8'))
+    except error.HTTPError as er:
+        print('Error code:', er.code)
